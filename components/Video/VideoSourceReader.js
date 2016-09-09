@@ -23,7 +23,7 @@ function getVimeoVideoId(url) {
 }
 
 function getYouTubeEmbedUrl(id) {
-  return `http://www.youtube.com/embed/${id}`;
+  return `https://www.youtube.com/embed/${id}`;
 }
 
 function getVimeoEmbedUrl(id) {

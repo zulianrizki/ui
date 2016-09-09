@@ -13,7 +13,7 @@ describe('VideoSource', () => {
     });
     describe('getUrl', () => {
       it('returns an embedded YouTube video url', () => {
-        const expected = 'http://www.youtube.com/embed/M7lc1UVf-VE';
+        const expected = 'https://www.youtube.com/embed/M7lc1UVf-VE';
         assert.equal(videoSourceReader.getUrl(), expected, 'video url not correct');
       });
     });
