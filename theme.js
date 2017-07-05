@@ -454,6 +454,11 @@ export default (variables = defaultThemeVariables) => ({
       width: window.width,
       height: dimensionRelativeToIphone(130),
     },
+
+    '.full-screen': {
+      width: window.width,
+      height: window.height,
+    },
   },
   'shoutem.ui.Image': {
     [INCLUDE]: ['commonVariants', 'imageSizes', 'fill-parent'],
