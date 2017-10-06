@@ -1090,7 +1090,7 @@ export default (variables = defaultThemeVariables) => ({
       alignSelf: 'stretch',
       borderRadius: 0,
       borderWidth: 0,
-      height: 55,
+      height: 46,
     },
 
     // Vertically stacked icon and text
