@@ -51,35 +51,35 @@ export const defaultThemeVariables = {
   shadowColor: 'rgba(0, 0, 0, 0.1)',
 
   heading: {
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'AlegreyaSans-Regular',
     fontStyle: 'normal',
     fontWeight: 'normal',
     color: '#222222',
     fontSize: 25,
   },
   title: {
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'AlegreyaSans-Regular',
     fontStyle: 'normal',
     fontWeight: 'normal',
     fontSize: 20,
     color: '#222222',
   },
   subtitle: {
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'AlegreyaSans-Regular',
     fontStyle: 'normal',
     fontWeight: 'normal',
     color: '#222222',
     fontSize: 15,
   },
   caption: {
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'AlegreyaSans-Regular',
     fontStyle: 'normal',
     fontWeight: 'normal',
     fontSize: 12,
     color: '#666666',
   },
   text: {
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'AlegreyaSans-Regular',
     fontStyle: 'normal',
     fontWeight: 'normal',
     fontSize: 15,
@@ -94,7 +94,7 @@ export const defaultThemeVariables = {
   navBarBackground: '#FFFFFF',
   navBarBorderColor: '#f2f2f2',
   navBarText: {
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'AlegreyaSans-Regular',
     fontStyle: 'normal',
     fontWeight: 'normal',
     color: '#222222',
@@ -117,17 +117,17 @@ export const defaultThemeVariables = {
   subNavListBorderColor: '#e0e0e0',
 
   primaryButtonText: {
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'AlegreyaSans-Regular',
     fontStyle: 'normal',
     fontWeight: '600',
     fontSize: 12,
-    color: '#222222',
+    color: '#fff',
   },
-  primaryButtonBackgroundColor: '#ffffff',
-  primaryButtonBorderColor: '#ffffff',
-  secondaryButtonTextColor: '#ffffff',
-  secondaryButtonBackgroundColor: '#2c2c2c',
-  secondaryButtonBorderColor: '#2c2c2c',
+  primaryButtonBackgroundColor: '#FF4851',
+  primaryButtonBorderColor: 'transparent',
+  secondaryButtonTextColor: '#222',
+  secondaryButtonBackgroundColor: '#fefefe',
+  secondaryButtonBorderColor: 'transparent',
 
   lineColor: '#e5e5e5',
   sectionHeaderBackgroundColor: '#F2F2F2',
@@ -331,6 +331,10 @@ export default (variables = defaultThemeVariables) => ({
       opacity: 0.5,
     },
 
+    '.bright':{
+      color:"#fff"
+    },
+
     backgroundColor: 'transparent',
   },
 
@@ -338,30 +342,30 @@ export default (variables = defaultThemeVariables) => ({
   'shoutem.ui.Heading': {
     [INCLUDE]: ['text'],
 
-    lineHeight: 30,
     ...variables.heading,
+    lineHeight: 30,
   },
 
   'shoutem.ui.Title': {
     [INCLUDE]: ['text'],
 
-    lineHeight: 25,
     ...variables.title,
+    lineHeight: 25,
   },
 
   'shoutem.ui.Subtitle': {
     [INCLUDE]: ['text'],
 
-    lineHeight: 18,
     ...variables.subtitle,
+    lineHeight: 18,
   },
 
   'shoutem.ui.Caption': {
     [INCLUDE]: ['text'],
 
+    ...variables.caption,
     lineHeight: 16,
     letterSpacing: 0.5,
-    ...variables.caption,
   },
 
   'shoutem.ui.Text': {
@@ -918,7 +922,7 @@ export default (variables = defaultThemeVariables) => ({
   'shoutem.ui.TouchableOpacity': {
     [INCLUDE]: ['commonVariants'],
 
-    activeOpacity: 0.8,
+    activeOpacity: 0.8
   },
 
   'shoutem.ui.TouchableNativeFeedback': {
@@ -994,6 +998,67 @@ export default (variables = defaultThemeVariables) => ({
       borderColor: variables.secondaryButtonBorderColor,
     },
 
+    '.nav': {
+      'shoutem.ui.Icon': {
+        color: "#666",
+        marginVertical: 0,
+        marginRight: 0,
+      },
+
+      'shoutem.ui.Text': {
+        textAlign: 'center',
+        marginVertical: 0,
+        marginRight: 0,
+        fontFamily: 'AlegreyaSans-Medium',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        color: '#666',
+        fontSize: 10,
+      },
+
+      backgroundColor: variables.secondaryButtonBackgroundColor,
+      flexDirection: 'column',
+      borderColor: "transparent",
+      borderRadius:0
+    },
+
+    '.active': {
+      'shoutem.ui.Icon': {
+        marginVertical: 0,
+        marginRight: 0,
+        color: variables.primaryButtonBackgroundColor,
+      },
+
+      'shoutem.ui.Text': {
+        color: variables.primaryButtonBackgroundColor,
+        textAlign: 'center',
+        marginVertical: 0,
+        marginRight: 0,
+        fontFamily: 'AlegreyaSans-Medium',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 10,
+      },
+
+      backgroundColor: variables.secondaryButtonBackgroundColor,
+      flexDirection: 'column',
+      borderColor: "transparent",
+      borderRadius:0
+    },
+
+    '.tab': {
+      backgroundColor: variables.primaryButtonBackgroundColor,
+      borderColor: "transparent",
+      borderRadius:0
+    },
+
+    '.tabActive': {
+      backgroundColor: variables.primaryButtonBackgroundColor,
+      borderBottomWidth:2,
+      borderBottomColor:'#fff',
+      borderRadius:0
+    },
+
     '.muted': {
       'shoutem.ui.Icon': {
         opacity: 0.5,
@@ -1040,7 +1105,7 @@ export default (variables = defaultThemeVariables) => ({
         textAlign: 'center',
         marginVertical: 0,
         marginRight: 0,
-        fontFamily: 'Rubik-Medium',
+        fontFamily: 'AlegreyaSans-Medium',
       },
 
       width: dimensionRelativeToIphone(120),
@@ -1168,7 +1233,7 @@ export default (variables = defaultThemeVariables) => ({
       },
     },
     container: {
-      backgroundColor: 'transparent',
+      backgroundColor: variables.primaryButtonBackgroundColor,
       borderBottomColor: 'transparent',
     },
   },
